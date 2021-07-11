@@ -1,0 +1,27 @@
+@import './var.scss';
+
+:root{
+    --bg-color-primary:#1a5cff;
+    --bg-color-warning:#ffba00;
+    --bg-color-success:#46c93a;
+    --bg-color-error:#ff4757;
+    --bg-color-dark:#1e1e1e;
+
+    --hover-color-primary:#487dff;
+    --hover-color-warning:#ffc833;
+    --hover-color-success:#6bd461;
+    --hover-color-error:#ff6c79;
+    --hover-color-dark:#4b4b4b;
+
+    --border-color:#efeff5;
+}
+
+button{
+    border:0px;
+    cursor: pointer;
+    color: white;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
