@@ -47,12 +47,18 @@
 			<img src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" style="width:100%;">
 		</template>
 	</x-card>
+
+	<br/>
+	<x-avatar text="xhl" scale>
+		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+	</x-avatar>
 </template>
 
 <script setup>
 	import XButton from './components/ui/button/XButton.vue'
 	import XButtonGroup from './components/ui/button/XButtonGroup.vue' 
 	import XCard from './components/ui/card/XCard.vue'
+	import XAvatar from "./components/ui/avatar/XAvatar.vue";
 </script>
 
 <style>
