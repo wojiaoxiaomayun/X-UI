@@ -77,6 +77,8 @@
         display: inline-flex;
         flex-direction: column;
 		border:1px solid var(--border-color);
+		background: var(--bg-color);
+		color: var(--font-color);
 
 		.x-card-head{
 			display: inline-flex;
@@ -85,7 +87,7 @@
 			justify-content: space-between;
 			user-select: none;
 			font-size: 16px;
-			border-bottom: 1px solid var(--border-color);
+			// border-bottom: 1px solid var(--border-color);
 			.x-card-head-header{
 				flex: 1;
 			}
@@ -93,12 +95,12 @@
 		.x-card-content{
 			padding: 16px 24px;
 			text-align: left;
-			border-bottom: 1px solid var(--border-color);
+			// border-bottom: 1px solid var(--border-color);
 		}
 		.x-card-footer{
 			padding: 16px 24px;
 			text-align: left;
-			border-bottom: 1px solid var(--border-color);
+			// border-bottom: 1px solid var(--border-color);
 		}
 		.x-card-action{
 			padding: 16px 24px;

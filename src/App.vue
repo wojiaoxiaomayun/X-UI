@@ -1,4 +1,5 @@
 <template>
+	<img src="./assets/logo.png" />
 	<x-button-group round>
 		<x-button>小徐加油</x-button>
 		<x-button color="warning">小徐加油</x-button>
@@ -11,7 +12,7 @@
 	</x-button-group>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill">#8a2be2</x-button>
 	<br/>
-	<x-card title="小徐" :shadow="{type:'hover',color:'rgba(255,0,0,.3)'}" style="width:300px;">
+	<x-card title="小徐" :shadow="{type:'hover',color:'rgba(255,0,0,.3)'}" style="width:300px;" border>
 		<!-- <template #header>
 			中国共产党
 		</template> -->
@@ -62,6 +63,7 @@
 </script>
 
 <style>
+	html,body{background: var(--bg-color);color: var(--font-color);}
 	#app {
 		font-family: Avenir, Helvetica, Arial, sans-serif;
 		-webkit-font-smoothing: antialiased;

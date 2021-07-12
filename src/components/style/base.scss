@@ -1,6 +1,9 @@
 @import './var.scss';
 
 :root{
+    --bg-color:var(--white);
+    --font-color:var(--black);
+
     --bg-color-primary:#1a5cff;
     --bg-color-warning:#ffba00;
     --bg-color-success:#46c93a;
@@ -14,6 +17,94 @@
     --hover-color-dark:#4b4b4b;
 
     --border-color:#efeff5;
+
+    /* 标准色 */
+    // 嫣红
+	--red: #e54d42;
+    //桔橙
+	--orange: #f37b1d;
+    //明黄
+	--yellow: #fbbd08;
+    //橄榄
+	--olive: #8dc63f;
+    //深绿
+	--green: #39b54a;
+    //天青
+	--cyan: #1cbbb4;
+    //海蓝
+	--blue: #0081ff;
+    // 姹紫
+	--purple: #6739b6;
+    // 木槿
+	--mauve: #9c26b0;
+    // 桃粉
+	--pink: #e03997;
+    // 棕褐
+	--brown: #a5673f;
+    // 玄灰
+	--gray: #aaaaaa;
+    //草灰
+	--grey: #8799a3;
+    //墨黑
+	--black: #333333;
+	--darkGray: #666666;
+	--ghostWhite: #f1f1f1;
+    // 雅白
+	--white: #ffffff;
+	/* 浅色 */
+    // 嫣红
+	--redLight: #fadbd9;
+    //桔橙
+	--orangeLight: #fde6d2;
+    //明黄
+	--yellowLight: #fef2ce;
+    //橄榄
+	--oliveLight: #e8f4d9;
+    //森绿
+	--greenLight: #d7f0db;
+    //天青
+	--cyanLight: #d2f1f0;
+    //海蓝
+	--blueLight: #cce6ff;
+    //姹紫
+	--purpleLight: #e1d7f0;
+    //木槿
+	--mauveLight: #ebd4ef;
+    //桃粉
+	--pinkLight: #f9d7ea;
+    //棕褐
+	--brownLight: #ede1d9;
+    //玄灰
+	--greyLight: #e7ebed;
+	/* 渐变色 */
+    // 魅红
+	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+    // 鎏金
+	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+    // 翠柳
+	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+    // 靛青
+	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+    // 惑紫
+	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+    // 霞彩
+	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+
+	/* 阴影透明色 */
+	--redShadow: rgba(204, 69, 59, 0.2);
+	--orangeShadow: rgba(217, 109, 26, 0.2);
+	--yellowShadow: rgba(224, 170, 7, 0.2);
+	--oliveShadow: rgba(124, 173, 55, 0.2);
+	--greenShadow: rgba(48, 156, 63, 0.2);
+	--cyanShadow: rgba(28, 187, 180, 0.2);
+	--blueShadow: rgba(0, 102, 204, 0.2);
+	--purpleShadow: rgba(88, 48, 156, 0.2);
+	--mauveShadow: rgba(133, 33, 150, 0.2);
+	--pinkShadow: rgba(199, 50, 134, 0.2);
+	--brownShadow: rgba(140, 88, 53, 0.2);
+	--greyShadow: rgba(114, 130, 138, 0.2);
+	--grayShadow: rgba(114, 130, 138, 0.2);
+	--blackShadow: rgba(26, 26, 26, 0.2);
 }
 
 button{
