@@ -53,6 +53,19 @@
 	<x-avatar text="xhl" scale>
 		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
 	</x-avatar>
+	<br/>
+	<br/>
+	<br/>
+	<x-switch trackColor="var(--bg-color-success)">
+		<template #on>a</template>
+		<template #off>中</template>
+	</x-switch>
+	<x-switch>
+		<template #circle>
+			<i class="x-icon-weibo-square-fill"></i>
+		</template>
+	</x-switch>
+	<x-switch trackColor="var(--bg-color-dark)" square></x-switch>
 </template>
 
 <script setup>
@@ -60,6 +73,7 @@
 	import XButtonGroup from './components/ui/button/XButtonGroup.vue' 
 	import XCard from './components/ui/card/XCard.vue'
 	import XAvatar from "./components/ui/avatar/XAvatar.vue";
+	import XSwitch from "./components/ui/switch/XSwitch.vue";
 </script>
 
 <style>

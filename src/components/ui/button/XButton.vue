@@ -11,13 +11,12 @@
 		<i v-if="!loading && iconSuffix" :class="iconSuffix" style="display:inline-block;margin-left:4px;"></i>
 	</button>
 </template>
-
-<script setup name="XButton">
+<script name="XButton" setup>
 	import {defineProps,ref,watch,onMounted} from 'vue'
 	import { ColorMix } from "../../../utils/xutil";
 	import Color from "colorjs.io"
 
-	let ColorEnum = {
+	const ColorEnum = {
 		PRIMARY:'primary',
 		WARNING:'warning',
 		ERROR:'error',
@@ -25,21 +24,21 @@
 		DARK:'dark',
 	}
 
-	let PlainEnum = {
+	const PlainEnum = {
 		SOLID:'solid',
 		DASHED:'dashed',
 		SOLID_BG:'solid_bg',
 		DASHED_BG:'dashed_bg'
 	}
 
-	let SizeEnum = {
+	const SizeEnum = {
 		NORMAL:'normal',
 		MEDIUM:'medium',
 		SMALL:'small',
 		MINI:'mini'
 	}
 
-	let NativeTypeEnum = {
+	const NativeTypeEnum = {
 		BUTTON:'button',
 		SUBMIT:'submit',
 		RESET:'reset'
@@ -49,10 +48,18 @@
 		color:{
 			type:String,
 			default:'primary',
-			validator:(value) => {
+			validator:function(value) {
 				try{
-					if(Object.values(ColorEnum).includes(value)) return true;
-					let color = new Color(value)
+					if(Object.values({
+						PRIMARY:'primary',
+						WARNING:'warning',
+						ERROR:'error',
+						SUCCESS:'success',
+						DARK:'dark',
+					}).includes(value)){
+						return true;
+					}
+					new Color(value)
 					return true;
 				}catch(e){
 					console.error(e.message)
@@ -83,17 +90,26 @@
 			type:String,
 			default:'normal',
 			validator:(value) => {
-				return Object.values(SizeEnum).includes(value);
+				return Object.values({
+							NORMAL:'normal',
+							MEDIUM:'medium',
+							SMALL:'small',
+							MINI:'mini'
+						}).includes(value);
 			}
 		},
-		circle:Boolean,
 		nativeType:{
 			type:String,
 			default:'button',
 			validator:(value) => {
-				return Object.values(NativeTypeEnum).includes(value);
+				return Object.values({
+							BUTTON:'button',
+							SUBMIT:'submit',
+							RESET:'reset'
+						}).includes(value);
 			}
 		},
+		circle:Boolean,
 		iconPrefix:String,
 		iconSuffix:String,
 		loading:Boolean,
@@ -154,6 +170,7 @@
 			renderStyle();
 		},{immediate:true})
 	})
+	
 
 </script>
 
