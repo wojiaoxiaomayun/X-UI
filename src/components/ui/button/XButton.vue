@@ -48,11 +48,30 @@
 	let props = defineProps({
 		color:{
 			type:String,
-			default:'primary'
+			default:'primary',
+			validator:(value) => {
+				try{
+					if(Object.values(ColorEnum).includes(value)) return true;
+					let color = new Color(value)
+					return true;
+				}catch(e){
+					console.error(e.message)
+				}
+				return false;
+			}
 		},
 		fontColor:{
 			type:String,
-			default:'white'
+			default:'white',
+			validator:(value) => {
+				try{
+					let color = new Color(value)
+					return true;
+				}catch(e){
+					console.error(e.message)
+				}
+				return false;
+			}
 		},
 		round:Boolean,
 		littleRound:Boolean,
@@ -62,12 +81,18 @@
 		block:Boolean,
 		size:{
 			type:String,
-			default:'normal'
+			default:'normal',
+			validator:(value) => {
+				return Object.values(SizeEnum).includes(value);
+			}
 		},
 		circle:Boolean,
 		nativeType:{
 			type:String,
-			default:'button'
+			default:'button',
+			validator:(value) => {
+				return Object.values(NativeTypeEnum).includes(value);
+			}
 		},
 		iconPrefix:String,
 		iconSuffix:String,

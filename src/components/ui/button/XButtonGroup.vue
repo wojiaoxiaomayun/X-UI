@@ -24,5 +24,5 @@
 	}
 	.x-button-group{display: inline-flex;}
 	.x-button-group .x-button{margin:0px;animation: none;}
-	.x-button-group-round{border-radius: 1000px;overflow: hidden;}
+	.x-button-group-round{border-radius: 50%;overflow: hidden;}
 </style>
