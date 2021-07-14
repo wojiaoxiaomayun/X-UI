@@ -2,7 +2,6 @@
 	<img src="./assets/logo.png" />
 	<x-button-group round>
 		<x-button>小徐加油</x-button>
-		<x-button color="warning">小徐加油</x-button>
 		<x-button color="error">小徐加油</x-button>
 		<x-button color="success">小徐加油</x-button>
 		<x-button color="dark">小徐加油</x-button>
@@ -10,28 +9,23 @@
 			添加人员
 		</x-button>
 	</x-button-group>
+	<x-button color="#8a2be2">小徐加油</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill">#8a2be2</x-button>
+	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" littleRound>#8a2be2</x-button>
+	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round>#8a2be2</x-button>
+	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round size="mini">#8a2be2</x-button>
 	<br/>
 	<x-card title="小徐" :shadow="{type:'hover',color:'rgba(255,0,0,.3)'}" style="width:300px;" border>
-		<!-- <template #header>
+		<template #header>
 			中国共产党
-		</template> -->
-		<!-- <template #extra>
+		</template>
+		 <template #extra>
 			<x-button-group round>
 				<x-button size="mini" color="white" fontColor="black">
 					<i class="x-icon-left-circle"></i>
 				</x-button>
 				<x-button size="mini" color="white" fontColor="black">
-					<i class="x-icon-left-circle"></i>
-				</x-button>
-				<x-button size="mini" color="white" fontColor="black">
-					<i class="x-icon-left-circle"></i>
-				</x-button>
-				<x-button size="mini" color="white" fontColor="black">
-					<i class="x-icon-left-circle"></i>
-				</x-button>
-				<x-button size="mini" color="white" fontColor="black">
-					<i class="x-icon-left-circle"></i>
+					<i class="x-icon-weibo-square-fill"></i>
 				</x-button>
 			</x-button-group>
 		</template>
@@ -43,14 +37,20 @@
 		</template>
 		<template #action>
 			<x-button>好屌啊</x-button>
-		</template> -->
-		<template #cover>
-			<img src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" style="width:100%;">
 		</template>
+		<!-- <template #cover>
+			<img src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" style="width:100%;">
+		</template> -->
 	</x-card>
 
 	<br/>
 	<x-avatar text="xhl" scale>
+		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+	</x-avatar>
+	<x-avatar icon="x-icon-weibo-square-fill" scale round>
+		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+	</x-avatar>
+	<x-avatar src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" scale>
 		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
 	</x-avatar>
 	<br/>

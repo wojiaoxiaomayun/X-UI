@@ -69,7 +69,7 @@
         text-align: center;
         overflow: hidden;
         color: white;
-        
+        margin: 8px;
         .x-avatar-img{
             width: 100%;
             height: 100%;

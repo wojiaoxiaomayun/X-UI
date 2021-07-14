@@ -2,10 +2,14 @@
 	<!-- TODO: 后期加入vuesax4 中的卡片 -->
     <div ref="XCard" class="x-card" :class="[shadowStatus == 'never'?'':shadowStatus == 'always'?'x-card-shadow':shadowStatus == 'hover'?'x-card-shadow-hover':'']" :style="{border:border?'':'none'}">
 		<div v-if="title || slots?.header" class="x-card-head" :style="{...headerStyle,border:border?'':'none'}">
-			<slot name="header">
-				{{title}}
-			</slot>
-			<slot name="extra"></slot>
+			<div class="x-card-head-header">
+				<slot name="header">
+					{{title}}
+				</slot>
+			</div>
+			<div class="x-card-head-extra">
+				<slot name="extra"></slot>
+			</div>
 		</div>
 		<div v-if="slots?.cover" class="x-card-cover" :style="{...coverStyle,border:border?'':'none'}">
 			<slot name="cover"></slot>
@@ -86,9 +90,11 @@
 			justify-content: space-between;
 			user-select: none;
 			font-size: 16px;
+			text-align: left;
 			// border-bottom: 1px solid var(--border-color);
 			.x-card-head-header{
 				flex: 1;
+				margin-right: 8px;
 			}
 		}
 		.x-card-content{
