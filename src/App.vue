@@ -1,5 +1,6 @@
 <template>
 	<img src="./assets/logo.png" />
+	<x-divider></x-divider>
 	<x-button-group round>
 		<x-button>小徐加油</x-button>
 		<x-button color="error">小徐加油</x-button>
@@ -9,12 +10,13 @@
 			添加人员
 		</x-button>
 	</x-button-group>
+	<x-divider></x-divider>
 	<x-button color="#8a2be2">小徐加油</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill">#8a2be2</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" littleRound>#8a2be2</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round>#8a2be2</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round size="mini">#8a2be2</x-button>
-	<br/>
+	<x-divider></x-divider>
 	<x-card title="小徐" :shadow="{type:'hover',color:'rgba(255,0,0,.3)'}" style="width:300px;" border>
 		<template #header>
 			中国共产党
@@ -42,8 +44,7 @@
 			<img src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" style="width:100%;">
 		</template> -->
 	</x-card>
-
-	<br/>
+	<x-divider></x-divider>
 	<x-avatar text="xhl" scale>
 		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
 	</x-avatar>
@@ -53,21 +54,29 @@
 	<x-avatar src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" scale>
 		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
 	</x-avatar>
-	<br/>
-	<br/>
-	<br/>
+	<x-divider textPosition="right">中国共产党万岁</x-divider>
 	<x-switch trackColor="var(--bg-color-success)">
 		<template #on>
 			<i class="x-icon-weibo-square-fill"></i>
 		</template>
 		<template #off>中国共产党万岁</template>
 	</x-switch>
-	<x-switch>
+	<!-- <x-switch>
 		<template #circle>
 			<i class="x-icon-weibo-square-fill"></i>
 		</template>
 	</x-switch>
-	<x-switch trackColor="var(--gradualBlue)" square v-model:checked="checked"></x-switch>
+	<x-switch trackColor="var(--gradualBlue)" square v-model:checked="checked"></x-switch> -->
+	<x-divider vertical textPosition="left" border="1px dotted red">
+		<x-button-group round>
+			<x-button size="mini" color="white" fontColor="black">
+				<i class="x-icon-left-circle"></i>
+			</x-button>
+			<x-button size="mini" color="white" fontColor="black">
+				<i class="x-icon-weibo-square-fill"></i>
+			</x-button>
+		</x-button-group>
+	</x-divider>
 </template>
 
 <script setup>
@@ -77,6 +86,7 @@
 	import XCard from './components/ui/card/XCard.vue'
 	import XAvatar from "./components/ui/avatar/XAvatar.vue";
 	import XSwitch from "./components/ui/switch/XSwitch.vue";
+	import XDivider from './components/ui/divider/XDivider.vue'
 
 	let checked = ref(true)
 	watch(checked,val => {
