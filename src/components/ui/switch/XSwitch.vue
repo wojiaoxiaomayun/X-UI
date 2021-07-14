@@ -76,6 +76,7 @@
 		min-width: 48px;
 		height: 28px;
 		margin: 8px;
+		font-size: 14px;
 		input[type=checkbox]{display: none;}
 		input[type=checkbox]:disabled ~ .x-switch-body{opacity: .7;}
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-thumb{
@@ -83,16 +84,13 @@
 			transition: all .5s;
 		}
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-track-left{
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-			width: auto;
-			min-width: 100%;
+			position: relative;
+			transform: translateX(0%);
 			transition: all .3s;
 		}
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-track-right{
-			width: 0%;
-			display: none;
+			position: absolute;
+			transform: translateX(100%);
 			transition: all .3s;
 		}
 		&-body{
@@ -102,6 +100,8 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
+			flex-grow: 0;
+			flex-shrink: 0;
 			user-select: none;
 			cursor: pointer;
 			position: relative;
@@ -109,7 +109,6 @@
 			border-radius: 1000px;
 			overflow: hidden;
 			box-shadow: -5px 0 25px 0 rgba(var(--black),.6);
-			white-space: nowrap;
 			.x-switch-thumb{
 				position: absolute;
 				background: var(--white);
@@ -127,10 +126,15 @@
 				justify-content: center;
 			}
 			.x-switch-track-left{
-				display: none;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
 				background: var(--bg-color-success);
-				width: 0;
+				width: auto;
+				min-width: 100%;
 				height: 100%;
+				position: absolute;
+				transform: translateX(-100%);
 				transition: all .3s;
 				overflow: hidden;
 				.x-switch-track-content{
@@ -139,15 +143,8 @@
 					color:var(--white);
 					display: flex;
 					align-items: center;
-					padding: 0px 8px;
-					flex-flow: 0;
-					flex-shrink: 0;
-				}
-				&::after{
-					content: '';
-					display: block;
-					width: 24px;
-					height: 24px;
+					padding-right:28px;
+					padding-left: 8px;
 				}
 			}
 			.x-switch-track-right{
@@ -166,15 +163,8 @@
 					color:var(--black);
 					display: flex;
 					align-items: center;
-					padding: 0px 8px;
-					flex-flow: 0;
-					flex-shrink: 0;
-				}
-				&::before{
-					content: '';
-					display: block;
-					width: 24px;
-					height: 24px;
+					padding-left:28px;
+					padding-right: 8px;
 				}
 			}
 		}

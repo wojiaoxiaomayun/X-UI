@@ -57,8 +57,10 @@
 	<br/>
 	<br/>
 	<x-switch trackColor="var(--bg-color-success)">
-		<template #on>a</template>
-		<template #off>中</template>
+		<template #on>
+			<i class="x-icon-weibo-square-fill"></i>
+		</template>
+		<template #off>中国共产党万岁</template>
 	</x-switch>
 	<x-switch>
 		<template #circle>
