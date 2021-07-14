@@ -1,12 +1,12 @@
 <template>
     <div :class="[!vertical && 'x-divider',vertical && 'x-divider-vertical']" :style="{justifyContent:justify,borderBottom:vertical?'none':border,borderLeft:vertical?border:'none'}">
-        <div class="x-divider-span">
+        <div class="x-divider-span" v-if="slots.default">
             <slot></slot>
         </div>
     </div>
 </template>
 <script setup name="Xdivider">
-    import {defineProps,computed} from 'vue'
+    import {defineProps,computed,useSlots} from 'vue'
     let props = defineProps({
         textPosition:{
             type:String,
@@ -16,6 +16,8 @@
         border:String,
         vertical:Boolean
     });
+
+    let slots = useSlots();
 
     let justify = computed(() => {
         return {
