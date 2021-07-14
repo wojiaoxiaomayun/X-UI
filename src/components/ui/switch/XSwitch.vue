@@ -1,6 +1,6 @@
 <template>
 	<div class="x-switch">
-		<input :id="id" type="checkbox" :disabled="disabled"/>
+		<input :id="id" type="checkbox" :disabled="disabled" :checked="checked" @change="checkboxChange"/>
 		<label :for="id" class="x-switch-body" :class="[square && 'square']">
 			<div class="x-switch-thumb" :class="[square && 'square']" :style="{background:thumbColor}">
 				<slot name="circle"></slot>
@@ -20,11 +20,13 @@
 </template>
 
 <script setup name="XSwitch">
-	import {defineProps} from 'vue';
+	import {defineProps,nextTick,getCurrentInstance} from 'vue';
 	import Color from 'colorjs.io';
 	import {guid} from '../../../utils/xutil'
+	let ctx = getCurrentInstance();
 	let id = guid();
 	let props = defineProps({
+		checked:Boolean,
 		square:Boolean,
 		disabled:Boolean,
 		thumbColor:{
@@ -67,6 +69,9 @@
 			}
 		}
 	});
+	const checkboxChange = (el) => {
+		ctx.emit("update:checked",!props.checked)
+	}
 </script>
 
 <style lang="scss" scope>
@@ -86,12 +91,12 @@
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-track-left{
 			position: relative;
 			transform: translateX(0%);
-			transition: all .3s;
+			transition: all .5s;
 		}
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-track-right{
 			position: absolute;
 			transform: translateX(100%);
-			transition: all .3s;
+			transition: all .5s;
 		}
 		&-body{
 			width: auto;
@@ -135,7 +140,7 @@
 				height: 100%;
 				position: absolute;
 				transform: translateX(-100%);
-				transition: all .3s;
+				transition: all .5s;
 				overflow: hidden;
 				.x-switch-track-content{
 					width: auto;
@@ -155,7 +160,7 @@
 				width: auto;
 				min-width: 100%;
 				height: 100%;
-				transition: all .3s;
+				transition: all .5s;
 				overflow: hidden;
 				.x-switch-track-content{
 					width: auto;

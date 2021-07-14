@@ -67,15 +67,21 @@
 			<i class="x-icon-weibo-square-fill"></i>
 		</template>
 	</x-switch>
-	<x-switch trackColor="var(--bg-color-dark)" square></x-switch>
+	<x-switch trackColor="var(--gradualBlue)" square v-model:checked="checked"></x-switch>
 </template>
 
 <script setup>
+	import { ref,watch } from "vue";
 	import XButton from './components/ui/button/XButton.vue'
 	import XButtonGroup from './components/ui/button/XButtonGroup.vue' 
 	import XCard from './components/ui/card/XCard.vue'
 	import XAvatar from "./components/ui/avatar/XAvatar.vue";
 	import XSwitch from "./components/ui/switch/XSwitch.vue";
+
+	let checked = ref(true)
+	watch(checked,val => {
+		console.log(val)
+	})
 </script>
 
 <style>

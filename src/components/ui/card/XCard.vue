@@ -65,7 +65,6 @@
 					}
 				}
 			}
-			console.log(shadowStatus.value)
 		},{immediate:true})
 	});
 </script>
