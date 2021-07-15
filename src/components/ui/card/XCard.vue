@@ -1,5 +1,6 @@
 <template>
 	<!-- TODO: 后期加入vuesax4 中的卡片 -->
+	<!-- TODO: 后期加入横向卡片，cover在左右侧 -->
     <div ref="XCard" class="x-card" :class="[shadowStatus == 'never'?'':shadowStatus == 'always'?'x-card-shadow':shadowStatus == 'hover'?'x-card-shadow-hover':'']" :style="{border:border?'':'none'}">
 		<div v-if="title || slots?.header" class="x-card-head" :style="{...headerStyle,border:border?'':'none'}">
 			<div class="x-card-head-header">

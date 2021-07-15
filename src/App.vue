@@ -67,7 +67,7 @@
 		</template>
 	</x-switch>
 	<x-switch trackColor="var(--gradualBlue)" square v-model:checked="checked"></x-switch> -->
-	<x-divider vertical textPosition="left" border="1px dotted red">
+	<x-divider textPosition="left" border="1px dotted red">
 		<x-button-group round>
 			<x-button size="mini" color="white" fontColor="black">
 				<i class="x-icon-left-circle"></i>
@@ -77,6 +77,7 @@
 			</x-button>
 		</x-button-group>
 	</x-divider>
+	<x-checkbox></x-checkbox>
 </template>
 
 <script setup>
@@ -87,7 +88,7 @@
 	import XAvatar from "./components/ui/avatar/XAvatar.vue";
 	import XSwitch from "./components/ui/switch/XSwitch.vue";
 	import XDivider from './components/ui/divider/XDivider.vue'
-
+	import XCheckbox from "./components/ui/checkbox/XCheckbox.vue";
 	let checked = ref(true)
 	watch(checked,val => {
 		console.log(val)
