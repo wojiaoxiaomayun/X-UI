@@ -61,12 +61,12 @@
 		</template>
 		<template #off>中国共产党万岁</template>
 	</x-switch>
-	<!-- <x-switch>
+	<x-switch>
 		<template #circle>
 			<i class="x-icon-weibo-square-fill"></i>
 		</template>
 	</x-switch>
-	<x-switch trackColor="var(--gradualBlue)" square v-model:checked="checked"></x-switch> -->
+	<x-switch trackColor="var(--gradualBlue)" disabled square v-model:checked="checked"></x-switch>
 	<x-divider textPosition="left" border="1px dotted red">
 		<x-button-group round>
 			<x-button size="mini" color="white" fontColor="black">
@@ -78,6 +78,20 @@
 		</x-button-group>
 	</x-divider>
 	<x-checkbox></x-checkbox>
+	<x-checkbox disabled color="var(--bg-color-warning)">
+		<template #icon>
+			<i class="x-icon">&#xe88c;</i>
+		</template>
+		<x-button size="mini" color="white" fontColor="black">
+			<i class="x-icon-weibo-square-fill"></i>
+		</x-button>
+	</x-checkbox>
+	<x-checkbox checked disabled color="var(--bg-color-primary)">
+		<template #icon>
+			<i class="x-icon">&#xe99c;</i>
+		</template>
+		中国共产党万岁
+	</x-checkbox>
 </template>
 
 <script setup>

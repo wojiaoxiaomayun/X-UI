@@ -43,7 +43,7 @@
     })
 </script>
 
-<style lang="scss" scope>
+<style lang="scss">
     .x-avatar-warp{
         display: inline-block;
         position: relative;

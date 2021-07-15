@@ -74,7 +74,7 @@
 	});
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .x-card{
 		--shadow-color:rgba(0, 0, 0, 0.1);
         width: 100%;

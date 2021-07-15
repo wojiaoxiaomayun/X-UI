@@ -7,6 +7,6 @@
 
 </script>
 
-<style lang="scss" scope>
+<style lang="scss">
 
 </style>

@@ -13,7 +13,7 @@
 	});
 </script>
 
-<style scope>
+<style lang="scss">
 	.x-button-group-horizontal{
 		align-items: center;
 		flex-wrap: wrap;

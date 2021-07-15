@@ -20,7 +20,7 @@
 </template>
 
 <script setup name="XSwitch">
-	import {defineProps,nextTick,getCurrentInstance} from 'vue';
+	import {defineProps,getCurrentInstance} from 'vue';
 	import Color from 'colorjs.io';
 	import {guid} from '../../../utils/xutil'
 	let ctx = getCurrentInstance();
@@ -83,7 +83,7 @@
 		margin: 8px;
 		font-size: 14px;
 		input[type=checkbox]{display: none;}
-		input[type=checkbox]:disabled ~ .x-switch-body{opacity: .7;}
+		input[type=checkbox]:disabled ~ .x-switch-body{opacity: .7;cursor:  not-allowed;}
 		input[type=checkbox]:checked ~ .x-switch-body .x-switch-thumb{
 			left: calc(100% - 23px);
 			transition: all .5s;

@@ -174,7 +174,7 @@
 
 </script>
 
-<style lang="scss" scope>
+<style lang="scss">
 	@import '../../style/var.scss';
 	.x-button{
 		padding: 8px 16px;
