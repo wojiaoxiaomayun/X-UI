@@ -94,7 +94,7 @@
 	</x-checkbox>
 	<x-divider textPosition="right">中国共产党万岁</x-divider>
 	<x-checkbox-group vertical>
-		<x-checkbox v-for="i in 20" :key="i" checked  color="var(--bg-color-primary)">
+		<x-checkbox hideBox v-for="i in 20" :key="i" checked :value="i + ''"  color="var(--bg-color-success)">
 			<template #icon>
 				<i class="x-icon">&#xe99c;</i>
 			</template>

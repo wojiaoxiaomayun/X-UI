@@ -2,14 +2,14 @@
     <div class="x-checkbox" :style="{'--checkbox-checked-color':color}">
         <input :id="id" type="checkbox" :checked="checked" :value="value" :disabled="disabled" @change="checkboxChange"/>
         <label :for="id" class="x-checkbox-warp">
-            <div class="x-checkbox-btn">
+            <div class="x-checkbox-btn" v-if="!hideBox">
                 <div class="x-checkbox-icon">
                     <slot name="icon">
                         <i class="x-icon-check"></i>
                     </slot>
                 </div>
             </div>
-            <div class="x-checkbox-label" v-if="slots.default">
+            <div class="x-checkbox-label" v-if="slots.default" :class="{'x-checkbox-btn-hide':hideBox}">
                 <slot>
                 </slot>
             </div>
@@ -41,7 +41,8 @@
         },
         checked:Boolean,
         disabled:Boolean,
-        value:String
+        value:String,
+        hideBox:Boolean
     });
 
     const checkboxChange = () => {
@@ -76,6 +77,10 @@
         input[type=checkbox]:checked ~ .x-checkbox-warp .x-checkbox-btn::after{
             width: 16px;
             height: 16px;
+            transition: all .5s;
+        }
+        input[type=checkbox]:checked ~ .x-checkbox-warp .x-checkbox-label.x-checkbox-btn-hide{
+            color: var(--font-color);
             transition: all .5s;
         }
     }
@@ -159,6 +164,12 @@
             white-space: nowrap;
             &:hover{
                 color:var(--checkbox-checked-color)
+            }
+        }
+        .x-checkbox-label.x-checkbox-btn-hide{
+            color:var(--checkbox-checked-color);
+            &:hover{
+                opacity: .7;
             }
         }
     }
