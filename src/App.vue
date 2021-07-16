@@ -17,9 +17,9 @@
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round>#8a2be2</x-button>
 	<x-button color="#8a2be2" plain="dashed" iconPrefix="x-icon-weibo-square-fill" round size="mini">#8a2be2</x-button>
 	<x-divider></x-divider>
-	<x-card title="小徐" :shadow="{type:'hover',color:'rgba(255,0,0,.3)'}" style="width:300px;" border>
+	<x-card title="小徐" :shadow="{type:'hover'}" style="width:300px;" border>
 		<template #header>
-			中国共产党
+			标题
 		</template>
 		 <template #extra>
 			<x-button-group round>
@@ -46,13 +46,13 @@
 	</x-card>
 	<x-divider></x-divider>
 	<x-avatar text="xhl" scale>
-		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+		<!-- <div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div> -->
 	</x-avatar>
 	<x-avatar icon="x-icon-weibo-square-fill" scale round>
-		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+		<!-- <div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div> -->
 	</x-avatar>
 	<x-avatar src="https://img2.baidu.com/it/u=2010980676,2375641500&fm=11&fmt=auto&gp=0.jpg" scale>
-		<div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div>
+		<!-- <div  style="width:15px;height:15px;border-radius:100px;background:var(--bg-color-success);bottom:0px;position:absolute;right:-1px;"></div> -->
 	</x-avatar>
 	<x-divider textPosition="right">中国共产党万岁</x-divider>
 	<x-switch trackColor="var(--bg-color-success)">
@@ -78,7 +78,7 @@
 		</x-button-group>
 	</x-divider>
 	<x-checkbox></x-checkbox>
-	<x-checkbox disabled color="var(--bg-color-warning)">
+	<x-checkbox color="var(--bg-color-warning)">
 		<template #icon>
 			<i class="x-icon">&#xe88c;</i>
 		</template>
@@ -86,12 +86,21 @@
 			<i class="x-icon-weibo-square-fill"></i>
 		</x-button>
 	</x-checkbox>
-	<x-checkbox checked disabled color="var(--bg-color-primary)">
+	<x-checkbox checked  color="var(--bg-color-primary)">
 		<template #icon>
 			<i class="x-icon">&#xe99c;</i>
 		</template>
 		中国共产党万岁
 	</x-checkbox>
+	<x-divider textPosition="right">中国共产党万岁</x-divider>
+	<x-checkbox-group vertical>
+		<x-checkbox v-for="i in 20" :key="i" checked  color="var(--bg-color-primary)">
+			<template #icon>
+				<i class="x-icon">&#xe99c;</i>
+			</template>
+			中国共产党万岁
+		</x-checkbox>
+	</x-checkbox-group>
 </template>
 
 <script setup>
@@ -103,6 +112,7 @@
 	import XSwitch from "./components/ui/switch/XSwitch.vue";
 	import XDivider from './components/ui/divider/XDivider.vue'
 	import XCheckbox from "./components/ui/checkbox/XCheckbox.vue";
+	import XCheckboxGroup from "./components/ui/checkbox/XCheckboxGroup.vue";
 	let checked = ref(true)
 	watch(checked,val => {
 		console.log(val)

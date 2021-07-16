@@ -22,7 +22,6 @@
 	import {guid} from '../../../utils/xutil'
 
 	let ctx = getCurrentInstance();
-    console.log(ctx)
 	let id = guid();
     let slots = useSlots();
 
@@ -66,8 +65,8 @@
 
         input[type=checkbox]:disabled ~ .x-checkbox-warp{
             opacity: .7;
-            cursor:  not-allowed;
-            pointer-events: none;
+            cursor: not-allowed;
+            // pointer-events: none;
         }
 
         input[type=checkbox]:checked ~ .x-checkbox-warp .x-checkbox-btn{
