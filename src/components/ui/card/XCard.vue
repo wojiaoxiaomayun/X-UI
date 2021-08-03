@@ -99,7 +99,7 @@
 			}
 		}
 		.x-card-content{
-			padding: 16px 24px;
+			padding: 8px 16px;
 			text-align: left;
 			// border-bottom: 1px solid var(--border-color);
 		}
@@ -109,7 +109,8 @@
 			// border-bottom: 1px solid var(--border-color);
 		}
 		.x-card-action{
-			padding: 16px 24px;
+			padding: 16px;
+			padding-top: 8px;
 			text-align: left;
 		}
     }
